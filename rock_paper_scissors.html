@@ -27,7 +27,35 @@
                 console.log("computer plays scissors");
             }
         }
-        
+
+        /*playRound(human,computer) throws error on human variable declaration but still runs*/
+
+        function playRound(human,computer){
+            hCounter=0;
+            cCounter=0;
+            human=prompt("");
+            human=human.toLowerCase();
+            console.log(human);
+            if (human=="rock" && computer ==3){
+                console.log("You win. Rock beats scissors");
+                hCounter +=1;
+            }else if (human=="rock" && computer==2){
+                console.log("You lose. Paper beats rock");
+                cCounter +=1;
+            }else if(human=="scissors" && computer==2){
+                console.log("You win. Scissors beat paper");
+                hCounter +=1;
+            }else if (human=="paper" && computer==1){
+                console.log("You win. Paper beats rock");
+                hCounter +=1;
+            }else if (human=="scissors" && computer==1){
+                console.log("You lose. Rock beats scissors");
+                cCounter +=1;
+            }else {
+                console.log("No winner!");
+            }
+        }
+
 
     </script>
 
