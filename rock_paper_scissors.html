@@ -56,6 +56,31 @@
             }
         }
 
+        function game(){
+            gameCounter=0;
+            hScore=0;
+            cScore=0;
+            while(gameCounter<5){
+                computerPlay();
+                playRound(playerSelection, computerSelection);
+                gameCounter +=1;
+                if(hCounter>cCounter){
+                    hScore +=1;
+                }else if(cCounter> hCounter){
+                    cScore +=1;
+                }
+            }if (gameCounter==5){
+                console.log("The game is finished!");
+                if(hScore>cScore){
+                    console.log("Congratulations! You beat the computer.");
+                }else if(hScore<cScore){
+                    console.log("Sorry. You have lost. Maybe next time.");
+                }else {
+                    console.log("Everyone wins today.");
+                }
+            }
+        }
+        game();
 
     </script>
 
