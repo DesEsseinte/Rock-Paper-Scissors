@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset ="UTF-8">
-    <script src="rock_paper_scissors.js"></script>
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-    <!--<script>
+
      let randomChoice
      let computerSelection
      let playerSelection
@@ -82,8 +74,3 @@
             }
         }
         game();
-
-    </script> -->
-
-</body>
-</html>
