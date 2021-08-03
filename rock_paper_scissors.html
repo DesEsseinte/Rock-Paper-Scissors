@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset ="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+     let randomChoice
+     let computerSelection
+     let playerSelection
+
+     let hCounter
+     let cCounter
+     let gameCounter
+
+        function computerPlay() {
+            randomChoice=Math.floor(Math.random()*3)+1;
+            if (randomChoice==1) {
+                computerSelection=1;
+                console.log("computer plays rock");
+            }else if (randomChoice==2) {
+                computerSelection=2;
+                console.log("computer plays paper");
+            }else if (randomChoice==3) {
+                computerSelection=3;
+                console.log("computer plays scissors");
+            }
+        }
+        
+
+    </script>
+
+</body>
+</html>
