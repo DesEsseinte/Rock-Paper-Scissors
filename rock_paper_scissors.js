@@ -6,50 +6,77 @@
      let hCounter
      let cCounter
      let gameCounter
+     let message
 
         function computerPlay() {
             randomChoice=Math.floor(Math.random()*3)+1;
             if (randomChoice==1) {
                 computerSelection=1;
-                console.log("computer plays rock");
+                displayComputer.textContent="computer plays rock";
             }else if (randomChoice==2) {
                 computerSelection=2;
-                console.log("computer plays paper");
+                displayComputer.textContent="computer plays paper";
             }else if (randomChoice==3) {
                 computerSelection=3;
-                console.log("computer plays scissors");
+                displayComputer.textContent="computer plays scissors";
             }
         }
 
         /*playRound(human,computer) throws error on human variable declaration but still runs*/
 
-        function playRound(human,computer){
+        function playRound(human,computer) {
             hCounter=0;
             cCounter=0;
-            human=prompt("");
-            human=human.toLowerCase();
+            computerPlay();
+            human=playerSelection;
+            computer=computerSelection;
+            //human=human.toLowerCase();
             console.log(human);
             if (human=="rock" && computer ==3){
-                console.log("You win. Rock beats scissors");
+                displayOutcome.textContent="You win. Rock beats scissors";
                 hCounter +=1;
             }else if (human=="rock" && computer==2){
-                console.log("You lose. Paper beats rock");
+                displayOutcome.textContent="You lose. Paper beats rock";
                 cCounter +=1;
             }else if(human=="scissors" && computer==2){
-                console.log("You win. Scissors beat paper");
+                displayOutcome.textContent="You win. Scissors beat paper";
                 hCounter +=1;
             }else if (human=="paper" && computer==1){
-                console.log("You win. Paper beats rock");
+                displayOutcome.textContent="You win. Paper beats rock";
                 hCounter +=1;
             }else if (human=="scissors" && computer==1){
-                console.log("You lose. Rock beats scissors");
+                displayOutcome.textContent="You lose. Rock beats scissors";
+                cCounter +=1;
+            }else if (human=="paper" && computer==3){
+                displayOutcome.textContent="You lose. Scissors beat paper";
                 cCounter +=1;
             }else {
-                console.log("No winner!");
+                displayOutcome.textContent="No winner!";
             }
         }
+        const btn1=document.querySelector('#rock');
+        btn1.addEventListener('click', ()=> {
+            playerSelection="rock";
+            playRound();
+        });
 
-        function game(){
+        const btn2=document.querySelector('#paper');
+        btn2.addEventListener('click', ()=> {
+            playerSelection="paper";
+            playRound();
+        });
+
+        const btn3=document.querySelector('#scissors');
+        btn3.addEventListener('click', ()=> {
+            playerSelection="scissors";
+            playRound();
+        }); 
+
+        const displayOutcome=document.querySelector('#displayoutcome');
+        const displayComputer=document.querySelector('#displaycomputer');
+
+
+        /*function game(){
             gameCounter=0;
             hScore=0;
             cScore=0;
@@ -73,4 +100,4 @@
                 }
             }
         }
-        game();
+        game();*/
