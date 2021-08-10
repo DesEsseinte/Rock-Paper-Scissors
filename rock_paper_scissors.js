@@ -34,31 +34,31 @@
            displayPlayer.textContent="You've played"+" "+human;
 
            if (human=="rock" && computer ==3){
-               displayOutcome.textContent="You win. Rock beats scissors";
+               displayOutcome.textContent="You win this round. Rock beats scissors";
                hCounter +=1;
                gameCounter +=1;
            }else if (human=="rock" && computer==2){
-               displayOutcome.textContent="You lose. Paper beats rock";
+               displayOutcome.textContent="You lose this round. Paper beats rock";
                cCounter +=1;
                gameCounter +=1;
            }else if(human=="scissors" && computer==2){
-               displayOutcome.textContent="You win. Scissors beat paper";
+               displayOutcome.textContent="You win this round. Scissors beat paper";
                hCounter +=1;
                gameCounter +=1;
            }else if (human=="paper" && computer==1){
-               displayOutcome.textContent="You win. Paper beats rock";
+               displayOutcome.textContent="You win this round. Paper beats rock";
                hCounter +=1;
                gameCounter +=1;
            }else if (human=="scissors" && computer==1){
-               displayOutcome.textContent="You lose. Rock beats scissors";
+               displayOutcome.textContent="You lose this round. Rock beats scissors";
                cCounter +=1;
                gameCounter +=1;
            }else if (human=="paper" && computer==3){
-               displayOutcome.textContent="You lose. Scissors beat paper";
+               displayOutcome.textContent="You lose this round. Scissors beat paper";
                cCounter +=1;
                gameCounter +=1;
            }else {
-               displayOutcome.textContent="No winner!";
+               displayOutcome.textContent="No winner this round!";
                gameCounter +=1;
            } game();
              hScore.textContent="you"+" "+hCounter;
@@ -88,7 +88,13 @@
            displayGameFinished.textContent="";
 
        };
-       const container=document.querySelector('.container');
+//containers from html below.
+       const containerCountBox=document.querySelector('#containercountbox');
+       const hCountBox=document.querySelector("#hcountbox");
+            containerCountBox.appendChild(hCountBox);
+       const cCountBox=document.querySelector("#ccountbox");
+            containerCountBox.appendChild(cCountBox);
+       const buttonDiv=document.querySelector("#buttondiv");
 
 
        const btn1=document.querySelector('#rock');
@@ -96,37 +102,40 @@
            playerSelection="rock";
            playRound();
        });
-       container.appendChild(btn1);
+            buttonDiv.appendChild(btn1);
 
        const btn2=document.querySelector('#paper');
        btn2.addEventListener('click', ()=> {
            playerSelection="paper";
            playRound();
        });
-       container.appendChild(btn2);
+            buttonDiv.appendChild(btn2);
 
        const btn3=document.querySelector('#scissors');
        btn3.addEventListener('click', ()=> {
            playerSelection="scissors";
            playRound();
        });
-       container.appendChild(btn3);
+            buttonDiv.appendChild(btn3);
 
        const hScore=document.querySelector('#hScore');
-           container.appendChild(hScore);
+            hCountBox.appendChild(hScore);
+           
        const cScore=document.querySelector('#cScore');
-           container.appendChild(cScore);
+            cCountBox.appendChild(cScore);
+           
        const displayOutcome=document.querySelector('#displayoutcome');
-           container.appendChild(displayOutcome);
+           
        const displayComputer=document.querySelector('#displaycomputer');
-           container.appendChild(displayComputer);
+            cCountBox.appendChild(displayComputer);
        const displayPlayer=document.querySelector('#displayplayer');
-           container.appendChild(displayPlayer);
+            hCountBox.appendChild(displayPlayer);
+           
        const displayGameFinished=document.querySelector('#gamefinished');
-           container.appendChild(displayGameFinished);
-
+            buttonDiv.appendChild(displayGameFinished);
+           
        const startBtn=document.querySelector('#start');
        startBtn.addEventListener('click', ()=> {
            startButton();
        });
-           container.appendChild(startBtn);
+            buttonDiv.appendChild(startBtn);

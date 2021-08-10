@@ -8,23 +8,30 @@
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-<div class="container">
-    <button id="rock">ROCK</button>
-    <button id="paper">PAPER</button>
-    <button id="scissors">SCISSORS</button>
-
-    <div id="score">
-        <p id=hScore>YOU</p>
-        <p id=cScore>COMPUTER</p>
+    <div id=containercountbox>
+        <div id="hcountbox">
+            <div id="displayplayer"></div>    
+            <p id=hScore>YOU</p>
+        </div>
+        <div id="ccountbox">
+            <div id="displaycomputer"></div>
+            <p id=cScore>COMPUTER</p>
+        </div>
     </div>
 
-    <div id="displayplayer"></div>
-    <div id="displaycomputer"></div>
-    <div id="displayoutcome"></div>
-    <div id="gamefinished" class="call"></div>
 
-    <button id="start">RESET</button>
-</div>
+    <div id="displayoutcome"></div>
+
+
+    <div id="buttondiv">
+        <button id="rock" class="playbuttons">ROCK</button>
+        <button id="paper" class="playbuttons">PAPER</button>
+        <button id="scissors" class="playbuttons">SCISSORS</button>
+        <div id="gamefinished" class="call"></div>
+        <button id="start">RESET</button>
+    </div> 
+
+    
 
 </body>
 </html>
