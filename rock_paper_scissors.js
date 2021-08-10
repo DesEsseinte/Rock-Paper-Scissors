@@ -62,22 +62,18 @@
                 displayOutcome.textContent="No winner!";
                 gameCounter +=1;
             } game();
-              hScore.textContent=hCounter;
-              cScore.textContent=cCounter;
+              hScore.textContent="you"+" "+hCounter;
+              cScore.textContent="computer"+" "+cCounter;
 
         }
 //game() keeps track of number of rounds and returns winner.
         function game() {
             if(gameCounter==5 && hCounter>cCounter){
                 displayGameFinished.textContent="The game is finished! Congratulations! You beat the computer.";
-               
-        
             }else if(gameCounter==5 && hCounter<cCounter){
                 displayGameFinished.textContent="The game is finished! Sorry. You have lost. Maybe next time.";
-
             }else if(gameCounter==5 && hCounter==cCounter){
                 displayGameFinished.textContent="Everyone wins today.";
-
             }
         }
 //startButton resets the game.
@@ -93,7 +89,7 @@
             displayGameFinished.textContent="";
 
         };
-
+        const container=document.querySelector('.container');
 
 
         const btn1=document.querySelector('#rock');
@@ -101,26 +97,37 @@
             playerSelection="rock";
             playRound();
         });
+        container.appendChild(btn1);
 
         const btn2=document.querySelector('#paper');
         btn2.addEventListener('click', ()=> {
             playerSelection="paper";
             playRound();
         });
+        container.appendChild(btn2);
 
         const btn3=document.querySelector('#scissors');
         btn3.addEventListener('click', ()=> {
             playerSelection="scissors";
             playRound();
         }); 
+        container.appendChild(btn3);
+
         const hScore=document.querySelector('#hScore');
+            container.appendChild(hScore);
         const cScore=document.querySelector('#cScore');
+            container.appendChild(cScore);
         const displayOutcome=document.querySelector('#displayoutcome');
+            container.appendChild(displayOutcome);
         const displayComputer=document.querySelector('#displaycomputer');
+            container.appendChild(displayComputer);
         const displayPlayer=document.querySelector('#displayplayer');
+            container.appendChild(displayPlayer);
         const displayGameFinished=document.querySelector('#gamefinished');
+            container.appendChild(displayGameFinished);
 
         const startBtn=document.querySelector('#start');
         startBtn.addEventListener('click', ()=> {
             startButton();
         });
+            container.appendChild(startBtn);
