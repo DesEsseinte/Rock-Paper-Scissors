@@ -1,15 +1,25 @@
 body {
-    background-color: rgb(101, 152, 175);
+    /*background-color: rgb(101, 152, 175);*/
+    /*background: linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
+    background-image: url("rps.image.png");
+    /*background:linear-gradient(to right, #c9e9f5 20%, #bae5f5 20% 40%,
+      #a7def2 40% 60%, #94d3eb 60% 80%, #56b7db 80%);*/
+    /*background:linear-gradient(75deg, #c9e9f5 19%, #bae5f5 22% 38%,
+        #a7def2 40% 57%, #94d3eb 62% 78%, #56b7db 83%);*/
+    /*background:radial-gradient(red 2%, yellow 5% 10%, #1e90ff 75% 85%);*/
+    /*background:conic-gradient(red 2%, yellow 5% 10%, #1e90ff 75% 85%);*/
 }
 h1{
     /*border:1px solid red;*/
     text-align: center;
-    height:200px;
+
 }
 .container{
     /*border:1px solid black;*/
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 20%;
     margin-right:10%;
-
+    /*background:linear-gradient(75deg, transparent, #c9e9f5 19%, #bae5f5 33% 38%,
+        #a7def2 40% 57%, #94d3eb 62% 73%, #56b7db 86%);*/
+    background:linear-gradient(transparent,skyblue);
 }
