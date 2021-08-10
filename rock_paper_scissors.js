@@ -3,35 +3,37 @@
      let computerSelection
      let playerSelection
 
-     let hCounter
-     let cCounter
-     let gameCounter=1;
+     let hCounter=0;
+     let cCounter=0;
+     let gameCounter=0;
      let message
 
+     //computerPlay() selects the computer's play when called.
         function computerPlay() {
             randomChoice=Math.floor(Math.random()*3)+1;
             if (randomChoice==1) {
                 computerSelection=1;
-                displayComputer.textContent="computer plays rock";
+                displayComputer.textContent="Computer plays rock";
             }else if (randomChoice==2) {
                 computerSelection=2;
-                displayComputer.textContent="computer plays paper";
+                displayComputer.textContent="Computer plays paper";
             }else if (randomChoice==3) {
                 computerSelection=3;
-                displayComputer.textContent="computer plays scissors";
+                displayComputer.textContent="Computer plays scissors";
             }
         }
 
-        /*playRound(human,computer) throws error on human variable declaration but still runs*/
 
+//playRound() calls computerSelectio() and compares Computer vs Human and returns 
+//the winner of each round. It also keeps & displays score.
         function playRound(human,computer) {
-            hCounter=0;
-            cCounter=0;
+            //hCounter=0;
+            //cCounter=0;
             computerPlay();
             human=playerSelection;
             computer=computerSelection;
             displayPlayer.textContent="You've played"+" "+human;
-            game(hCounter, cCounter);    
+                
             if (human=="rock" && computer ==3){
                 displayOutcome.textContent="You win. Rock beats scissors";
                 hCounter +=1;
@@ -59,8 +61,41 @@
             }else {
                 displayOutcome.textContent="No winner!";
                 gameCounter +=1;
+            } game();
+              hScore.textContent=hCounter;
+              cScore.textContent=cCounter;
+
+        }
+//game() keeps track of number of rounds and returns winner.
+        function game() {
+            if(gameCounter==5 && hCounter>cCounter){
+                displayGameFinished.textContent="The game is finished! Congratulations! You beat the computer.";
+               
+        
+            }else if(gameCounter==5 && hCounter<cCounter){
+                displayGameFinished.textContent="The game is finished! Sorry. You have lost. Maybe next time.";
+
+            }else if(gameCounter==5 && hCounter==cCounter){
+                displayGameFinished.textContent="Everyone wins today.";
+
             }
         }
+//startButton resets the game.
+        function startButton() {
+            gameCounter=0;
+            hCounter=0;
+            cCounter=0;
+            hScore.textContent="";
+            cScore.textContent="";
+            displayOutcome.textContent="";
+            displayComputer.textContent="";
+            displayPlayer.textContent="";
+            displayGameFinished.textContent="";
+
+        };
+
+
+
         const btn1=document.querySelector('#rock');
         btn1.addEventListener('click', ()=> {
             playerSelection="rock";
@@ -78,44 +113,14 @@
             playerSelection="scissors";
             playRound();
         }); 
-
+        const hScore=document.querySelector('#hScore');
+        const cScore=document.querySelector('#cScore');
         const displayOutcome=document.querySelector('#displayoutcome');
         const displayComputer=document.querySelector('#displaycomputer');
         const displayPlayer=document.querySelector('#displayplayer');
+        const displayGameFinished=document.querySelector('#gamefinished');
 
-        function game(hCounter, cCounter) {
-            if(gameCounter==5 && hCounter>cCounter){
-                    console.log("The game is finished! Congratulations! You beat the computer.");
-            }else if(gameCounter==5 && hCounter<cCounter){
-                    console.log("The game is finished! Sorry. You have lost. Maybe next time.");
-            }else if(gameCounter==5 && hCounter==cCounter){
-                    console.log("Everyone wins today.");
-            }
-        }
-        
-
-
-
-        /*function game(){
-            gameCounter=0;
-            hScore=0;
-            cScore=0;
-        for(gameCounter=0;gameCounter<5;gameCounter++){
-        if(hCounter>cCounter){
-                hScore +=1; 
-        }else if(cCounter> hCounter){
-                cScore +=1;
-        }gameCounter +=1;
-    }
-        if (gameCounter==5){
-                console.log("The game is finished!");
-        }else if(hScore>cScore){
-                console.log("Congratulations! You beat the computer.");
-        }else if(hScore<cScore){
-                console.log("Sorry. You have lost. Maybe next time.");
-        }else {
-                console.log("Everyone wins today.");
-        }
-        
-    }*/
-//        game();
+        const startBtn=document.querySelector('#start');
+        startBtn.addEventListener('click', ()=> {
+            startButton();
+        });
