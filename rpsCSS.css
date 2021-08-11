@@ -1,7 +1,7 @@
 body {
-    /*background-color: rgb(101, 152, 175);*/
+    background-color: rgb(101, 152, 175);
     /*background: linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
-    background-image: url("rps.image.png");
+    /*background-image: url("rps.image.png");*/
     /*background:linear-gradient(to right, #c9e9f5 20%, #bae5f5 20% 40%,
       #a7def2 40% 60%, #94d3eb 60% 80%, #56b7db 80%);*/
     /*background:linear-gradient(75deg, #c9e9f5 19%, #bae5f5 22% 38%,
@@ -17,66 +17,72 @@ h1{
 #containercountbox{
     border: 5px dotted orange;
     display:flex;
-    justify-content: space-between;
-    margin-left: 20%;
-    margin-right: 20%;
+    justify-content: space-around;
     margin-top: 2%;
     height: 130px;
 }
     #hcountbox{
         border:5px solid blue;
         width: 150px;
-        margin-right:20%;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: bolder;
+        background:linear-gradient(transparent,bisque);
     }
     #ccountbox{
         border:5px solid blue;
         width: 150px;
-        margin-left: 20%;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: bolder;
+        background:linear-gradient(transparent,bisque);
     }
 
 #displayoutcome{
     border:8px solid black;
-    height: 40px;
+    display:flex;
+    justify-content: center;
+    height: 45px;
     margin-top: 2%;
     margin-left: 33%;
     margin-right:33%;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bolder;
-    background:linear-gradient(transparent,gray);
+    background:linear-gradient(transparent,bisque);
 }
 
 #buttondiv{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     border:5px solid pink;
-    height: 500px;
-    margin-left: 15%;
-    margin-right:15%;
+    height: 200px;
+    width:50%;
+    margin-top: 5%;
+    margin-left:25%;
+    margin-right:25%;
 }
     .playbuttons{
         width:110px;
         height:110px;
-        margin-left: 15%;
         box-shadow: 2px 2px 2px rgb(162, 196, 240);
-        background:linear-gradient(transparent, white);
+        background:linear-gradient(transparent,bisque);
     }
 
     #gamefinished {
+        border:1px solid darkblue;
         margin-top:5%;
-        margin-left:25%;
+        margin-left: 33%;
+        margin-right:33%;
         font-size:40px;
-        font-family: cursive;
-        font-weight:bolder;
+        font-family:cursive;
+        font-weight:700;
     }
 
     #start{
-        width:33%;
-        height: 40px;
+        width: 100px;;
+        height: 50px;
         margin-top: 5%;
-        margin-left:33%;
-        border-radius: 20%;
-        box-shadow: 2px 2px 2px rgb(162, 196, 240);
-        background:linear-gradient(to bottom,transparent, white);
+        margin-left: 47%;
+        border-radius: 60%;
+        box-shadow: 2px 2px 2px rgb(47, 48, 49);
+        background:linear-gradient(transparent,rgb(92, 90, 89));
     }

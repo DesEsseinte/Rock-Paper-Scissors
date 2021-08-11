@@ -68,11 +68,11 @@
 //game() keeps track of number of rounds and returns winner.
        function game() {
            if(gameCounter==5 && hCounter>cCounter){
-               displayGameFinished.textContent="The game is finished! Congratulations! You beat the computer.";
+               displayGameFinished.textContent="Congratulations! You beat the computer.";
            }else if(gameCounter==5 && hCounter<cCounter){
-               displayGameFinished.textContent="The game is finished! Sorry. You have lost. Maybe next time.";
+               displayGameFinished.textContent="The game over! Sorry. You've lost. Maybe next time.";
            }else if(gameCounter==5 && hCounter==cCounter){
-               displayGameFinished.textContent="Everyone wins today.";
+               displayGameFinished.textContent="Everyone wins today!";
            }
        }
 //startButton resets the game.
@@ -95,6 +95,8 @@
        const cCountBox=document.querySelector("#ccountbox");
             containerCountBox.appendChild(cCountBox);
        const buttonDiv=document.querySelector("#buttondiv");
+       const gameFinishedContainer=document.querySelector('#gamefinishedContainer');
+       const startContainer=document.querySelector('#start');
 
 
        const btn1=document.querySelector('#rock');
@@ -103,7 +105,7 @@
            playRound();
        });
             buttonDiv.appendChild(btn1);
-
+o
        const btn2=document.querySelector('#paper');
        btn2.addEventListener('click', ()=> {
            playerSelection="paper";
@@ -132,10 +134,10 @@
             hCountBox.appendChild(displayPlayer);
            
        const displayGameFinished=document.querySelector('#gamefinished');
-            buttonDiv.appendChild(displayGameFinished);
+            
            
        const startBtn=document.querySelector('#start');
        startBtn.addEventListener('click', ()=> {
            startButton();
        });
-            buttonDiv.appendChild(startBtn);
+            
