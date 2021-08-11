@@ -15,29 +15,44 @@ h1{
 
 }
 #containercountbox{
-    border: 5px dotted orange;
+    border:1px solid black;
     display:flex;
     justify-content: space-around;
     margin-top: 2%;
-    height: 130px;
+    height: 140px;
 }
     #hcountbox{
-        border:5px solid blue;
+        order:1;
         width: 150px;
         font-size: 20px;
         font-weight: bolder;
-        background:linear-gradient(transparent,bisque);
+        box-shadow: -20px -20px 2px rgb(40, 55, 75);
+        background:linear-gradient(transparent,rgb(57, 93, 104));
+    }
+    #hScore{
+        order:2;
+        font-size:x-large;
+    }
+    #round{
+        order:3;
+        height:135px;
+        font-size:x-large;
+        font-style: italic;
+    }
+    #cScore{
+        order:4;
+        font-size:x-large;
     }
     #ccountbox{
-        border:5px solid blue;
+        order:5;
         width: 150px;
         font-size: 20px;
         font-weight: bolder;
-        background:linear-gradient(transparent,bisque);
+        box-shadow: 20px -20px 2px rgb(40, 55, 75);
+        background:linear-gradient(transparent,rgb(57, 93, 104));
     }
-
+     
 #displayoutcome{
-    border:8px solid black;
     display:flex;
     justify-content: center;
     height: 45px;
@@ -46,32 +61,31 @@ h1{
     margin-right:33%;
     font-size: 30px;
     font-weight: bolder;
-    background:linear-gradient(transparent,bisque);
 }
 
 #buttondiv{
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border:5px solid pink;
     height: 200px;
     width:50%;
     margin-top: 5%;
     margin-left:25%;
     margin-right:25%;
+    margin-bottom: 0%;
 }
     .playbuttons{
         width:110px;
         height:110px;
-        box-shadow: 2px 2px 2px rgb(162, 196, 240);
-        background:linear-gradient(transparent,bisque);
+        box-shadow: 2px 2px 2px rgb(40, 55, 75);
+        background:linear-gradient(transparent,rgb(57, 93, 104));
     }
 #gamefinishedContainer{
     display:flex;
     justify-content: center;
+    margin-top: 1%;
 }
     #gamefinished {
-        border:1px solid darkblue;
         margin-top:5%;
         font-size:40px;
         font-family:cursive;

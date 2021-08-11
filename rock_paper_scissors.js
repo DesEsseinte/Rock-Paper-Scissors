@@ -5,6 +5,7 @@
     let hCounter=0;
     let cCounter=0;
     let gameCounter=0;
+    let round="";
     let message
 
     //computerPlay() selects the computer's play when called.
@@ -59,16 +60,30 @@
                displayOutcome.textContent="No winner this round!";
                gameCounter +=1;
            } game();
-             hScore.textContent="you"+" "+hCounter;
-             cScore.textContent="computer"+" "+cCounter;
-
-       }
+             hScore.textContent="YOU"+"  " + hCounter;
+             cScore.textContent="COMPUTER"+ "  " + cCounter;
+             roundCounter();
+        }
+//counts rounds and sends to display current round.
+       function roundCounter(){
+            if(gameCounter==1){
+               round ="Current round"+"II";
+           }else if(gameCounter==2){
+               round="Current round"+"III";
+           }else if(gameCounter==3){
+               round="Current round"+"IV";
+           }else if(gameCounter==4){
+               round="Current round"+"V";
+           }else if(gameCounter==5){
+                round="press 'reset'";
+           }roundDisplay.textContent=round;
+        }
 //game() keeps track of number of rounds and returns winner.
        function game() {
            if(gameCounter==5 && hCounter>cCounter){
                displayGameFinished.textContent="Congratulations! You beat the computer.";
            }else if(gameCounter==5 && hCounter<cCounter){
-               displayGameFinished.textContent="The game over! Sorry. You've lost. Maybe next time.";
+               displayGameFinished.textContent="Game over! Sorry. You've lost. Maybe next time.";
            }else if(gameCounter==5 && hCounter==cCounter){
                displayGameFinished.textContent="Everyone wins today!";
            }
@@ -78,8 +93,9 @@
            gameCounter=0;
            hCounter=0;
            cCounter=0;
-           hScore.textContent="";
-           cScore.textContent="";
+           roundDisplay.textContent="Current round I";
+           hScore.textContent="YOU";
+           cScore.textContent="COMPUTER";
            displayOutcome.textContent="";
            displayComputer.textContent="";
            displayPlayer.textContent="";
@@ -88,14 +104,19 @@
        };
 //containers from html below.
        const containerCountBox=document.querySelector('#containercountbox');
+       
        const hCountBox=document.querySelector("#hcountbox");
             containerCountBox.appendChild(hCountBox);
        const cCountBox=document.querySelector("#ccountbox");
             containerCountBox.appendChild(cCountBox);
+       
        const buttonDiv=document.querySelector("#buttondiv");
+       
        const gameFinishedContainer=document.querySelector('#gamefinishedContainer');
        const startContainer=document.querySelector('#startcontainer');
-
+       
+       const roundDisplay=document.querySelector('#round');
+            
 
        const btn1=document.querySelector('#rock');
        btn1.addEventListener('click', ()=> {
@@ -118,24 +139,20 @@
        });
             buttonDiv.appendChild(btn3);
 
-       const hScore=document.querySelector('#hScore');
-            hCountBox.appendChild(hScore);
+    const hScore=document.querySelector('#hScore');
+    const cScore=document.querySelector('#cScore');
+            
            
-       const cScore=document.querySelector('#cScore');
-            cCountBox.appendChild(cScore);
-           
-       const displayOutcome=document.querySelector('#displayoutcome');
-           
-       const displayComputer=document.querySelector('#displaycomputer');
+        const displayOutcome=document.querySelector('#displayoutcome');
+        const displayComputer=document.querySelector('#displaycomputer');
             cCountBox.appendChild(displayComputer);
-       const displayPlayer=document.querySelector('#displayplayer');
+        const displayPlayer=document.querySelector('#displayplayer');
             hCountBox.appendChild(displayPlayer);
-           
-       const displayGameFinished=document.querySelector('#gamefinished');
+        const displayGameFinished=document.querySelector('#gamefinished');
             gameFinishedContainer.appendChild(displayGameFinished);
            
-       const startBtn=document.querySelector('#start');
-       startBtn.addEventListener('click', ()=> {
-           startButton();
-       });
-            startContainer.appendChild(startBtn);
+    const startBtn=document.querySelector('#start');
+        startBtn.addEventListener('click', ()=> {
+        startButton();
+    });
+        startContainer.appendChild(startBtn);
