@@ -26,8 +26,6 @@
 //playRound() calls computerSelectio() and compares Computer vs Human and returns
 //the winner of each round. It also keeps & displays score.
        function playRound(human,computer) {
-           //hCounter=0;
-           //cCounter=0;
            computerPlay();
            human=playerSelection;
            computer=computerSelection;
@@ -96,7 +94,7 @@
             containerCountBox.appendChild(cCountBox);
        const buttonDiv=document.querySelector("#buttondiv");
        const gameFinishedContainer=document.querySelector('#gamefinishedContainer');
-       const startContainer=document.querySelector('#start');
+       const startContainer=document.querySelector('#startcontainer');
 
 
        const btn1=document.querySelector('#rock');
@@ -105,7 +103,7 @@
            playRound();
        });
             buttonDiv.appendChild(btn1);
-o
+
        const btn2=document.querySelector('#paper');
        btn2.addEventListener('click', ()=> {
            playerSelection="paper";
@@ -134,10 +132,10 @@ o
             hCountBox.appendChild(displayPlayer);
            
        const displayGameFinished=document.querySelector('#gamefinished');
-            
+            gameFinishedContainer.appendChild(displayGameFinished);
            
        const startBtn=document.querySelector('#start');
        startBtn.addEventListener('click', ()=> {
            startButton();
        });
-            
+            startContainer.appendChild(startBtn);

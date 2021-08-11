@@ -66,22 +66,25 @@ h1{
         box-shadow: 2px 2px 2px rgb(162, 196, 240);
         background:linear-gradient(transparent,bisque);
     }
-
+#gamefinishedContainer{
+    display:flex;
+    justify-content: center;
+}
     #gamefinished {
         border:1px solid darkblue;
         margin-top:5%;
-        margin-left: 33%;
-        margin-right:33%;
         font-size:40px;
         font-family:cursive;
         font-weight:700;
     }
-
+#startcontainer{
+    display:flex;
+    justify-content: center;
+}
     #start{
         width: 100px;;
         height: 50px;
         margin-top: 5%;
-        margin-left: 47%;
         border-radius: 60%;
         box-shadow: 2px 2px 2px rgb(47, 48, 49);
         background:linear-gradient(transparent,rgb(92, 90, 89));
