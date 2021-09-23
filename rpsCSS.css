@@ -1,178 +1,197 @@
 body {
-    background-color: #ede2d3;
-    /*background-color:#8fcff2;*/
-    /*background-color: rgb(101, 152, 175);*/
-    /*background: linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
-    /*background-image: url("rps.image.png");*/
-    /*background:linear-gradient(to right, #c9e9f5 20%, #bae5f5 20% 40%,
-      #a7def2 40% 60%, #94d3eb 60% 80%, #56b7db 80%);*/
-    /*background:linear-gradient(75deg, #c9e9f5 19%, #bae5f5 22% 38%,
-        #a7def2 40% 57%, #94d3eb 62% 78%, #56b7db 83%);*/
-    /*background:radial-gradient(red 2%, yellow 5% 10%, #1e90ff 75% 85%);*/
-    /*background:conic-gradient(red 2%, yellow 5% 10%, #1e90ff 75% 85%);*/
-  }
+  background-color: #d5def3;
+  /*background-color:#8fcff2;*/
+  /*background-color: rgb(101, 152, 175);*/
+  /*background: linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
+  /*background-image: url("rps.image.png");*/
+  /*background:linear-gradient(to right, #c9e9f5 20%, #bae5f5 20% 40%,
+    #a7def2 40% 60%, #94d3eb 60% 80%, #56b7db 80%);*/
+  /*background:linear-gradient(75deg, #c9e9f5 19%, #bae5f5 22% 38%,
+      #a7def2 40% 57%, #94d3eb 62% 78%, #56b7db 83%);*/
+  /*background:radial-gradient(red 2%, yellow 5% 10%, #1e90ff 75% 85%);*/
+  /*background:conic-gradient(red 2%, yellow 5% 10%, #1e90ff 75% 85%);*/
+}
 
 h1{
-    text-align: center;
-    font-family: monospace;
-    text-shadow: 1px 1px 1px;
+  text-align: center;
+  font-family: monospace;
+  text-shadow: 1px 1px 1px;
 }
 #containercountbox{
-    display:flex;
-    justify-content:space-between;
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    height: 280px;
-    box-shadow: 15px 15px 55px black;
-    background-image: url("rps.image.png");
-    background-size: 15%;
+  display:flex;
+  justify-content:space-between;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 280px;
+  box-shadow: 15px 15px 55px black;
+  background-image: url("rps.image.png");
+  background-size: 15%;
 }
-    #hcountbox{
-        order:1;
-        width: 190px;
-        min-width: 140px;
-        height:310px;
-        font-size: 20px;
-        font-weight: bolder;
-        font-family: monospace;
-        box-shadow: -20px -20px 2px rgb(40, 55, 75);
-        background:linear-gradient(#d9faf9 70%,transparent 95%);
-    }
-    #hScore{
-        order:2;
-        font-size:x-large;
-    }
+                        /*media queries for containerbox elements. Mobile version*/
+                                                @media screen and (min-height: 1500px){
+                                                  #containercountbox{
+                                                    height:560px;
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                    div#hcountbox{
+                                                    height:620px;
+                                                    width:210px;
+                                                    font-size: 45px;
 
-    #cScore{
-        order:4;
-        font-size:x-large;
-    }
-    #ccountbox{
-        order:5;
-        width: 190px;
-        min-width: 140px;
-        height:310px;
-        font-size: 20px;
-        font-weight: bolder;
-        font-family: monospace;
-        box-shadow: 20px -20px 2px rgb(40, 55, 75);
-        background:linear-gradient(#d9faf9 70%,transparent 95%);
-    }
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                  div#ccountbox{
+                                                    height:620px;
+                                                    width:210px;
+                                                    font-size: 45px;
+                                                  }
+                                                }
 
-#round{
-      text-align: center;
-      font-size:x-large;
-      font-style: italic;
-      color:#ba0f06;
-      animation-name: round;
-      animation-duration:4s;
-      animation-iteration-count: infinite;
+  #hcountbox{
+      order:1;
+      width: 190px;
+      min-width: 140px;
+      height:310px;
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: monospace;
+      box-shadow: -20px -20px 2px rgb(40, 55, 75);
+      background:linear-gradient(#d9faf9 70%,transparent 95%);
   }
-                              @keyframes round{
-                                0%{color:#ba0f06;}
-                                50%{color: black;}
-                                100%{color:#ba0f06}
-                              }
-#displayoutcome{
-    height: 45px;
-    width:100%;
+
+  #ccountbox{
+      order:5;
+      width: 190px;
+      min-width: 140px;
+      height:310px;
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: monospace;
+      box-shadow: 20px -20px 2px rgb(40, 55, 75);
+      background:linear-gradient(#d9faf9 70%,transparent 95%);
+  }
+                                  /*media queries for bottom half. Mobile */
+                                                @media screen and (min-height: 1500px){
+                                                  #main2 > *{
+                                                    margin-top: 10%;
+                                                    height:100px;
+                                                  }
+                                                }
+                                                @media screen and (min-height:1500px){
+                                                  div#buttondiv{
+                                                    width:100%;
+                                                    margin-left: 0%;
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                  button.playbuttons{
+                                                    height:200px;
+                                                    width: 200px;
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                  button#start{
+                                                    height:100px;
+                                                    width: 200px;
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                  div#displayoutcome{
+                                                    font-size: 50px;
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                  p#round{
+                                                    font-size: 50px;
+                                                  }
+                                                }
+                                                @media screen and (min-height: 1500px){
+                                                  div#gamefinished{
+                                                    font-size: 50px;
+                                                  }
+                                                }
+#round{
     text-align: center;
-    font-size: 30px;
-    font-weight: bolder;
+    font-size:x-large;
+    font-style: italic;
+    color:#ba0f06;
+    animation-name: round;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+                            @keyframes round{
+                              0%{color:#ba0f06;}
+                              50%{color: black;}
+                              100%{color:#ba0f06}
+                            }
+#displayoutcome{
+  height: 45px;
+  width:100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: walsheim;
 }
 
 #buttondiv{
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: 180px;
-    width:50%;
-    margin-top: none;
-    margin-left:25%;
-    margin-right:25%;
-    margin-bottom: 3%;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 180px;
+  width:50%;
+  margin-top: none;
+  margin-left:25%;
+  margin-right:25%;
+  margin-bottom: 3%;
 }
-    .playbuttons{
-        width:110px;
-        height:110px;
-        margin-top:2%;
-        box-shadow: 2px 2px 2px rgb(40, 55, 75);
-        background:linear-gradient(transparent,rgb(57, 93, 104));
-    }
-    .playbuttons:hover{
-      background: linear-gradient(transparent, lightblue);
-      box-shadow: 3px 3px 5px black;
-    }
+  .playbuttons{
+      width:110px;
+      height:110px;
+      margin-top:2%;
+      box-shadow: 2px 2px 2px rgb(40, 55, 75);
+      background:linear-gradient(transparent,rgb(57, 93, 104));
+  }
+  .playbuttons:hover{
+    background: linear-gradient(transparent, lightblue);
+    box-shadow: 3px 3px 5px black;
+  }
 
-    #gamefinished {
-        text-align: center;
-        font-size:40px;
-        font-family:"Lucida handwriting", monospace;
-        font-weight:700;
-    }
+  #gamefinished {
+      text-align: center;
+      font-size:40px;
+      font-family:walsheim;
+      font-weight: bolder;
+  }
 #startcontainer{
-    display:flex;
-    justify-content: center;
+  display:flex;
+  justify-content: center;
 }
-    #start{
-        width: 100px;;
-        height: 50px;
-        margin-top:none;
-        border-radius: 60%;
-        box-shadow: 2px 2px 2px rgb(47, 48, 49);
-        background:linear-gradient(transparent,rgb(57, 93, 104));
-    }
-    #start:hover{
-      box-shadow: 3px 3px 5px black;
-      background:linear-gradient(transparent, lightblue);
-    }
-
-    @media screen and (max-width: 700px){
-        #buttondiv{
-          height:400px;
-          margin-top: 10%;
-        }
-      }
+  #start{
+      width: 100px;;
+      height: 50px;
+      margin-top:none;
+      border-radius: 60%;
+      box-shadow: 2px 2px 2px rgb(47, 48, 49);
+      background:linear-gradient(transparent,rgb(57, 93, 104));
+  }
+  #start:hover{
+    box-shadow: 3px 3px 5px black;
+    background:linear-gradient(transparent, lightblue);
+  }
 
 
-    @media screen and (max-width: 700px){
-        #startcontainer {
-            margin-top: 3%;
-        }
-    }
-
-
-}
-/* other attempts at mobile improvement*/
-/*
-                                          @media screen and (max-width: 900px){
-                                            #buttondiv {
-                                              height:220px;
-                                            }
+                                        @media screen and (max-width: 900px){
+                                          #buttondiv {
+                                            height:220px;
                                           }
-                                          @media screen and (max-width: 900px){
-                                            #displayoutcome{
-                                              height:100px;
-                                            }
+                                        }
+                                        @media screen and (max-width: 900px){
+                                          #displayoutcome{
+                                            height:100px;
+                                          }
+                                        }
 
-                                   
-                                    @media screen and (max-width: 400px){
-                                      #displayoutcome{
-
-                                      }
-                                    }
-                                    @media screen and (max-width: 400px){
-                                      #containercountbox{
-                                        width:100%;
-                                        height:500px;
-                                        margin:0%;
-                                      }
-                                    }
-                                    @media screen and (max-width: 400px){
-                                      #gamefinishedContainer{
-                                        height:500px;
-
-                                      }
-                                    }
