@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Etch a Sketch</title>
-      <script src="esketch.js" defer></script>
-      <link rel="stylesheet" href="esketch.css">
-    </head>
-  <body>
-    <h1>Etch-a-sketch</h1>
-    <main>
-      <div id="buttonBox">
-        <button id="black">black</button>
-        <button id="color">color</button>
-          <div class="colorMenu">
-            <button id="red" class="colorBtn">red</button>
-            <button id="blue"class="colorBtn">blue</button>
-            <button id="green"class="colorBtn">green</button>
-          </div>
-        <button id="eraser">eraser</button>
-        <button id="clear">clear</button>
-        <div id="gridSizeBtn">
-          <button id="small" class="sizeBtn">16 X 16</button>
-          <button id="medium"class="sizeBtn">32 X 32</button>
-          <button id="large"class="sizeBtn">64 X 64</button>
+<head>
+    <meta charset ="UTF-8">
+    <link rel="stylesheet" href="rpsCSS.css">
+    <script src="rock_paper_scissors.js" defer></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id=containercountbox>
+        <div id="hcountbox">
+            <div id="displayplayer"></div>
+              <p id="hScore">YOU</p>
         </div>
-      </div>
-      <div id="gridContainer"></div>
-    </main>
-  </body>
+        <div id="ccountbox">
+            <div id="displaycomputer"></div>
+            <p id="cScore">COMPUTER</p>
+        </div>
+    </div>
+  <div id=main2>
+    <p id="round">Current Round</p>
+    <div id="displayoutcome"></div>
+    <div id="buttondiv">
+        <button id="rock" class="playbuttons">ROCK</button>
+        <button id="paper" class="playbuttons">PAPER</button>
+        <button id="scissors" class="playbuttons">SCISSORS</button>
+    </div>
+    <div id="gamefinishedContainer">
+        <div id="gamefinished" class="call"></div>
+    </div>
+    <div id="startcontainer">
+        <button id="start">RESET</button>
+    </div>
+  </div>
+</body>
 </html>
