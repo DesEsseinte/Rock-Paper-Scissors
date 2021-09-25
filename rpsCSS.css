@@ -30,12 +30,14 @@ h1{
   background-size: 15%;
 }
                         /*media queries for containerbox elements. Mobile version*/
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   #containercountbox{
                                                     height:560px;
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                     div#hcountbox{
                                                     height:620px;
                                                     width:210px;
@@ -43,7 +45,8 @@ h1{
 
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   div#ccountbox{
                                                     height:620px;
                                                     width:210px;
@@ -75,41 +78,48 @@ h1{
       background:linear-gradient(#d9faf9 70%,transparent 95%);
   }
                                   /*media queries for bottom half. Mobile */
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   #main2 > *{
                                                     margin-top: 10%;
                                                     height:100px;
                                                   }
                                                 }
-                                                @media screen and (min-height:1500px){
+                                                @media screen and (max-device-height:1000px)
+                                                              and (max-device-width: 500px){
                                                   div#buttondiv{
                                                     width:100%;
                                                     margin-left: 0%;
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   button.playbuttons{
                                                     height:200px;
                                                     width: 200px;
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   button#start{
                                                     height:100px;
                                                     width: 200px;
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   div#displayoutcome{
                                                     font-size: 50px;
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   p#round{
                                                     font-size: 50px;
                                                   }
                                                 }
-                                                @media screen and (min-height: 1500px){
+                                                @media screen and (max-device-height: 1000px)
+                                                              and (max-device-width: 500px){
                                                   div#gamefinished{
                                                     font-size: 50px;
                                                   }
